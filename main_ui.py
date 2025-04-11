@@ -54,8 +54,8 @@ list_id = None
 with col1:
     with st.form("task_import_form"):
         # API Key Input
-        api_key = st.text_input("Enter your ClickUp API Key", type="default", help="Your ClickUp API key should start with 'pk_'")
-        list_id = st.text_input("Enter your ClickUp List ID")
+        api_key = st.text_input("Enter your ClickUp API Key", type="default", help="Your ClickUp API key should start with 'pk_', generate one at https://app.clickup.com/settings/integrations, click Generate API key")
+        list_id = st.text_input("Enter your ClickUp List ID", help="Open your list in Clickup and look at the url, in this url: https://app.clickup.com/9012339576/v/l/6-901209212186-1, the list id is the big number in the last section i.e. 901209212186")
         uploaded_file = st.file_uploader("Choose a CSV file", type=['csv'])
         custom_prompt = st.text_area("Enter the custom prompt for this brand")
         form_submitted = st.form_submit_button("Import Tasks to ClickUp")
